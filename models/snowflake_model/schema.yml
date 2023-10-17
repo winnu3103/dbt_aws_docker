@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: snowplow
+    database: PROD
+    schema: PUBLIC
+    loader: S3
+    loaded_at_field: collector_hour
+    tables:
+      - name: local_tbl
+        description: "External table of Snowflake"                  
+        external:
+          location: "@PROD_STAGE"
+          file_format: "(type = csv)"
+          auto_refresh: true
+        # Specify ALL column names + datatypes.
+        # Column order must match for CSVs, column names must match for other formats.
+        # Some databases support schema inference.
+
+        columns:
+          - name: date
+            data_type: varchar(255)
+            description: "Application ID"
+          - name: total_price
+            data_type: varchar(255)
+            description: "Platform"
+          
