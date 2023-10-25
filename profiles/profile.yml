@@ -1,7 +1,7 @@
 dbt_docker_aws_proj:
   outputs:
     dev:
-      account: zpb50417.us-east-1
+      account: UHSOIZG-FRB48862
       database: PROD
       password: Moon2far
       role: ACCOUNTADMIN
@@ -9,5 +9,5 @@ dbt_docker_aws_proj:
       threads: 2
       type: snowflake
       user: Janu31
-      warehouse: COMPUTE_WH
+      warehouse: PROD_WH
   target: dev
