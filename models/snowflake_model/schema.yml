@@ -10,7 +10,7 @@ sources:
       - name: local_tbl
         description: "External table of Snowflake"                  
         external:
-          location: "@PROD_STAGE"
+          location: "@aws_aggr_stg"
           file_format: "(type = csv)"
           auto_refresh: true
         # Specify ALL column names + datatypes.
