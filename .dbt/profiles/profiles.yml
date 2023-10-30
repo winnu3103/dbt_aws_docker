@@ -1,0 +1,27 @@
+dbt_docker_aws_proj:
+  outputs:
+    dev:
+      account: UHSOIZG-FRB48862
+      database: PROD
+      password: Moon2far
+      role: ACCOUNTADMIN
+      schema: PUBLIC
+      threads: 2
+      type: snowflake
+      user: Janu31
+      warehouse: PROD_WH
+  target: dev
+#dbtlearn1:
+ # outputs:
+  #  dev:
+   #   account: wvgdzjy-sp89301
+    #  database: airbnb
+     # password: dbtPassword123
+      #role: transform
+      #schema: dev
+      #threads: 4
+      #type: snowflake
+      #user: dbt
+      #warehouse: COMPUTE_WH
+  #target: dev
+
